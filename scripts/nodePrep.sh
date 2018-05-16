@@ -14,7 +14,7 @@ echo $(date) " - Update system to latest packages and install dependencies"
 
 yum -y install wget git net-tools bind-utils iptables-services bridge-utils bash-completion kexec-tools sos psacct
 yum -y install cloud-utils-growpart.noarch
-yum -y update --exclude=WALinuxAgent
+yum -y update --exclude=WALinuxAgent --exclude=NetworkManager --exclude=dhclient
 
 # Grow Root File System
 echo $(date) " - Grow Root FS"
